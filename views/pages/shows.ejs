@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/head %>
+<body>
+	<% include ../partials/header %>
+	<img src="/images/logo.jpg" class="logo">
+	<div class="image1">
+		Hi
+	</div>
+
+	<% shows.forEach((show) => { %>
+		<br>
+	    Date:
+	    <%= show.date.toDateString() %>
+	    <br>
+	    Venue: 
+	    <%= show.venue %>
+	    <br>
+	    <% if(show.time) { %>
+	    Time:
+	    <%= show.time %>
+	    <br>
+	    <% } %>
+	    <% if(show.bands) { %>
+	    Bands:
+	    <%= show.bands %>
+	    <br> 
+	    <% } %>
+	    City:
+	    <%= show.city %>
+	    <br>
+	    <br>
+	<% }) %>
+
+	<% include ../partials/footer %>
+</body>
+</html>

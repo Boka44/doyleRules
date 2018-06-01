@@ -1,0 +1,19 @@
+@mixin textBox($height) {
+	flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: $height * 2;
+    max-width: 600px;
+    min-width: 500px;
+    height: $height;
+    min-height: 25px;
+    max-height: 300px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    overflow: scroll;
+    overflow-x: hidden;
+    border: 0px;
+}

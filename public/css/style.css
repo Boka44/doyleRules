@@ -1,0 +1,102 @@
+body {
+  background: black;
+  color: white;
+  text-align: center; }
+
+.logo {
+  width: 60%; }
+
+.textBoxL {
+  flex-direction: column;
+  resize: auto;
+  cursor: text;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  width: 600px;
+  max-width: 600px;
+  min-width: 500px;
+  height: 300px;
+  min-height: 25px;
+  max-height: 300px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  overflow: scroll;
+  overflow-x: hidden;
+  border: 0px; }
+
+.textBoxS {
+  flex-direction: column;
+  resize: auto;
+  cursor: text;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  width: 50px;
+  max-width: 600px;
+  min-width: 500px;
+  height: 25px;
+  min-height: 25px;
+  max-height: 300px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  overflow: scroll;
+  overflow-x: hidden;
+  border: 0px; }
+
+.header {
+  font-family: 'futura-pt-condensed',Futura,sans-serif;
+  transition: margin 250ms,max-height 250ms; }
+  .header nav {
+    padding: 15px; }
+    .header nav div {
+      list-style-type: none;
+      padding: 0px;
+      display: inline-flex; }
+      .header nav div a {
+        height: 50px;
+        width: 80px;
+        line-height: 50px;
+        transition: .5s;
+        text-decoration: none;
+        color: white;
+        padding-right: 15px;
+        padding-left: 15px; }
+        .header nav div a:hover {
+          background: #323232;
+          cursor: pointer;
+          text-shadow: 0 0 10px red; }
+
+.headline h2 {
+  font-style: italic;
+  text-shadow: 0 0 5px red; }
+
+.homeCardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center; }
+
+.homeCard {
+  min-width: 250px;
+  min-height: 400px;
+  height: 400px;
+  width: 600px;
+  border: 5px white solid;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px; }
+  .homeCard h2 {
+    text-shadow: 0 0 5px red; }
+
+.bioContainer {
+  width: 50%;
+  margin: auto; }
+
+.image1 {
+  background-image: url("../images/band1edit.jpg");
+  background-size: contain;
+  transition: .3s;
+  height: 400px;
+  width: 600px; }
+  .image1:hover {
+    background-image: url("../images/band2edit.jpg"); }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% include ../partials/head %>
+</head>
+<body>
+<% include ../partials/header %>
+    Sup Fucker!
+    <br>
+    Customize everything!
+
+
+    <h2>Headline</h2>
+    <form action="/account/headline" method="POST">
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="textHead"><%= content.headline %></textarea>
+        <br>
+        <input type="submit" name="Submit" id="submitBtn">
+    </form>
+
+    <h2>Bio</h2>
+    <form action="/account/bio" method="POST">
+        <textarea type="text" class="textBoxL" rows="10" cols="50" name="textBio"><%= content.bio %></textarea>
+        <br>
+        <input type="submit" name="Submit" id="submitBtn">
+    </form>
+    
+    <h2>Shows</h2>
+    <% shows.forEach((show) => { %>
+    <form method="POST">
+        Date:
+        <br>
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="showDate"><%= show.date %></textarea>
+        <br>
+        Venue: 
+        <br>
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="showVenue"><%= show.venue %></textarea>
+        <br>
+        Time:
+        <br>
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="showTime"><%= show.time %></textarea>
+        <br>
+        Bands:
+        <br>
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="showBands"><%= show.bands %></textarea>
+        <br> 
+        City:
+        <br>
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="showCity"><%= show.city %></textarea>   
+        <br>
+        <input type="submit" formaction="/account/shows/edit/<%= show.id %>" name="edit" value="Submit" id="submitBtn">
+        <input type="submit" formaction="/account/shows/delete/<%= show.id %>" name="delete" value="Delete" id="submitBtn">
+        <br>
+        <br>
+    </form>
+    <% }) %>
+    <h2>Add Show:</h2>
+    <br>
+    <br>
+    <form method="POST">
+        Date:
+        <br>
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="showDate"></textarea>
+        <br>
+        Venue: 
+        <br>
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="showVenue"></textarea>
+        <br>
+        Time:
+        <br>
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="showTime"></textarea>
+        <br>
+        Bands:
+        <br>
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="showBands"></textarea>
+        <br> 
+        City:
+        <br>
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="showCity"></textarea>   
+        <br>
+        <input type="submit" formaction="/account/shows/add" name="add" value="Add" id="submitBtn">
+        <br>
+        <br>
+    </form>
+    
+
+    <h2>News</h2>
+
+    <br>
+    <% include ../partials/footer %>
+</body>
+</html>

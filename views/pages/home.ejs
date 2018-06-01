@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/head %>
+<body>
+	<% include ../partials/header %>
+	<img src="/images/logo.jpg" class="logo">
+	<div class="headline">
+		<h2><%= content.headline %></h2>
+	</div>
+
+	<div class="homeCardsContainer">
+		<!-- Upcoming Shows Card -->
+		<div class="nextShows homeCard">
+			<h2>Upcoming Horror Business</h2>
+			<% shows.forEach((show) => { %>
+			    
+			    <br>
+			    Date:
+			    <%= show.date.toDateString() %>
+			    <br>
+			    Venue: 
+			    <%= show.venue %>
+			    <br>
+			    <% if(show.time) { %>
+			    Time:
+			    <%= show.time %>
+			    <br>
+			    <% } %>
+			    <% if(show.bands) { %>
+			    Bands:
+			    <%= show.bands %>
+			    <br> 
+			    <% } %>
+			    City:
+			    <%= show.city %>
+			    <br>
+			    <br>
+			<% }) %>
+		</div>
+
+		<!-- Current News Card -->
+		<div class="currentNews homeCard">
+			
+		</div>
+	</div>
+
+<% include ../partials/footer %>
+</body>
+</html>

@@ -1,0 +1,97 @@
+@import "helper/_placeholders";
+@import "helper/_mixins";
+@import "helper/_variables";
+
+
+body {
+	background: $background;
+	color: $fontColor;
+	text-align: center;
+}
+
+.logo {
+	
+	width: 60%;
+}
+
+.textBoxL {
+	@include textBox(300px);
+}
+
+.textBoxS {
+	@include textBox(25px);
+}
+
+
+.header {
+	font-family: 'futura-pt-condensed',Futura,sans-serif;
+	transition: margin 250ms,max-height 250ms;
+	nav {
+		padding: 15px;
+		div {
+			list-style-type: none;
+			padding: 0px;
+			display: inline-flex;
+			a {
+				height: 50px;
+				width: 80px;
+				line-height: 50px;
+				transition: .5s;
+				text-decoration: none;
+				color: $fontColor;
+				padding-right: 15px;
+				padding-left: 15px;
+
+				&:hover {
+					background: $background + 50;
+					cursor: pointer;
+					text-shadow: 0 0 10px red;
+				}
+			}	
+		}	
+	}
+}
+
+.headline {
+	h2 {
+		font-style: italic;
+		text-shadow: 0 0 5px red;
+	}
+}
+
+.homeCardsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	
+}
+
+.homeCard {
+	min-width: 250px;
+	min-height: 400px;
+	height: 400px;
+	width: 600px;
+	border: 5px white solid;
+	margin: auto;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	h2 {
+		text-shadow: 0 0 5px red;
+	}
+}
+
+.bioContainer {
+	width: 50%;
+	margin: auto;
+}
+
+.image1 {
+	background-image: url('../images/band1edit.jpg');
+	background-size: contain;
+	transition: .3s;
+	height: 400px;
+	width: 600px;
+	&:hover {
+		background-image: url('../images/band2edit.jpg');
+	}
+}
