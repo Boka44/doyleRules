@@ -85,13 +85,18 @@ body {
 	margin: auto;
 }
 
-.image1 {
-	background-image: url('../images/band1edit.jpg');
-	background-size: contain;
+.showImage {
+	@include imageBox('../images/band1edit.jpg', 400px, 600px);
 	transition: .3s;
-	height: 400px;
-	width: 600px;
 	&:hover {
 		background-image: url('../images/band2edit.jpg');
 	}
+}
+
+.homeImage {
+	@include imageBox('../images/band3edit.jpg', 400px, 600px);
+}
+
+.bioImage {
+	@include imageBox('../images/band4edit.jpg', 300px, 500px);
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/head %>
+<body>
+	<% include ../partials/header %>
+	<img src="/images/logo.jpg" class="logo">
+
+	<form action="/contact" method="POST">
+		Name:
+		<br>
+		<textarea type="text" class="textBoxS" rows="10" cols="50" name="contactName" placeholder="Name" required></textarea>
+		<br>
+		Email:
+		<br>
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="contactEmail" placeholder="Email" required></textarea>
+        <br>
+        Message:
+        <br>
+        <textarea type="text" class="textBoxL" rows="10" cols="50" name="contactMessage" placeholder="Message" required></textarea>
+        <br>
+        <input type="submit" name="Submit">
+	</form>
+	<br>
+	<br>
+
+	<% include ../partials/footer %>
+</body>
+</html>

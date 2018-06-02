@@ -92,11 +92,29 @@ body {
   width: 50%;
   margin: auto; }
 
-.image1 {
+.showImage {
   background-image: url("../images/band1edit.jpg");
   background-size: contain;
-  transition: .3s;
+  background-repeat: no-repeat;
   height: 400px;
-  width: 600px; }
-  .image1:hover {
+  width: 600px;
+  margin: auto;
+  transition: .3s; }
+  .showImage:hover {
     background-image: url("../images/band2edit.jpg"); }
+
+.homeImage {
+  background-image: url("../images/band3edit.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 600px;
+  margin: auto; }
+
+.bioImage {
+  background-image: url("../images/band4edit.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 500px;
+  margin: auto; }

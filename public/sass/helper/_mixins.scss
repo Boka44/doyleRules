@@ -17,3 +17,12 @@
     overflow-x: hidden;
     border: 0px;
 }
+
+@mixin imageBox($url, $height, $width) {
+    background-image: url($url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: $height;
+    width: $width;
+    margin: auto;
+}

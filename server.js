@@ -20,6 +20,7 @@ const logout = require('./routes/logout');
 const account = require('./routes/account');
 const bio = require('./routes/bio');
 const shows = require('./routes/shows');
+const contact = require('./routes/contact');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -52,6 +53,7 @@ app.use('/logout', logout);
 app.use('/account', account);
 app.use('/bio', bio);
 app.use('/shows', shows);
+app.use('/contact', contact);
 
 app.listen(PORT, () => {
 	console.log("Server is running on port " + PORT);
