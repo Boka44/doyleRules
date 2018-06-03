@@ -1,7 +1,23 @@
+@font-face {
+  font-family: horror;
+  src: url("/fonts/tt/green fuz.ttf"); }
+
 body {
   background: black;
   color: white;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; }
+
+.overlay {
+  position: relative;
+  padding: .75rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #ffffff;
+  background-color: #de0e0e;
+  border-color: #880000;
+  width: 50%;
+  margin: auto; }
 
 .logo {
   width: 60%; }
@@ -44,6 +60,26 @@ body {
   overflow-x: hidden;
   border: 0px; }
 
+@media screen and (max-width: 600px) {
+  .header nav div a:not(:first-child):not(:last-child) {
+    display: none; }
+  .responsive {
+    position: relative; }
+    .responsive div a {
+      float: none;
+      display: inline block !important;
+      width: 100%;
+      text-align: left; }
+  .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right;
+    display: block !important; } }
+
+.icon {
+  display: none; }
+
 .header {
   font-family: 'futura-pt-condensed',Futura,sans-serif;
   transition: margin 250ms,max-height 250ms; }
@@ -54,6 +90,8 @@ body {
       padding: 0px;
       display: inline-flex; }
       .header nav div a {
+        font-size: 25px;
+        font-family: horror;
         height: 50px;
         width: 80px;
         line-height: 50px;
@@ -88,6 +126,18 @@ body {
   .homeCard h2 {
     text-shadow: 0 0 5px red; }
 
+.links {
+  margin-bottom: 10px; }
+  .links a {
+    color: white;
+    padding-right: 15px;
+    padding-left: 15px; }
+    .links a:hover {
+      cursor: pointer;
+      text-shadow: 0 0 10px red; }
+    .links a i {
+      font-size: 50px; }
+
 .bioContainer {
   width: 50%;
   margin: auto; }
@@ -118,3 +168,6 @@ body {
   height: 300px;
   width: 500px;
   margin: auto; }
+
+.footer {
+  margin-top: 40px; }

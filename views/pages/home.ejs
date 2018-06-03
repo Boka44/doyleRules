@@ -2,12 +2,13 @@
 <html>
 <% include ../partials/head %>
 <body>
+
 	<% include ../partials/header %>
 	<img src="/images/logo.jpg" class="logo">
 	<div class="headline">
 		<h2><%= content.headline %></h2>
 	</div>
-
+	<div class="overlay"></div>
 	<div class="homeImage">
 		
 	</div>
@@ -43,11 +44,20 @@
 		</div>
 
 		<!-- Current News Card -->
-		<div class="currentNews homeCard">
+		<!-- <div class="currentNews homeCard">
 			
-		</div>
+		</div> -->
 	</div>
 
+	<div class="links">
+		<br>
+		<a href="https://www.facebook.com/doylerulesband/" target="blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+		<a href="https://www.youtube.com/channel/UCIN_25AEWaZsUQ7cTPj11vw" target="blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+		<a href="" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+		<br>
+	</div>
+
+<script type="text/javascript" src="/js/script.js"></script>
 <% include ../partials/footer %>
 </body>
 </html>

@@ -6,7 +6,9 @@ const showSchema = new mongoose.Schema({
 	venue: String,
 	time: String,
 	bands: String,
-	city: String
+	city: String,
+	lat: Number,
+	long: Number
 });
 
 const Show = mongoose.model('Show', showSchema);

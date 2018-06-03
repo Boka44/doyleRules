@@ -58,22 +58,3 @@ app.use('/contact', contact);
 app.listen(PORT, () => {
 	console.log("Server is running on port " + PORT);
 })
-
-
-
-
-/*
-
-To Do
-
-Set login page routing
-set passport local
-create fields to edit content and shows
-edit home to show 3 future shows
-list pages to create (start small dummy)
-Put together home page
-authenticate everything
-Styling
-
-
-*/

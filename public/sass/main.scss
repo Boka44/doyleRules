@@ -2,11 +2,27 @@
 @import "helper/_mixins";
 @import "helper/_variables";
 
+@font-face {
+	font-family: horror;
+	src: url('/fonts/tt/green fuz.ttf');
+}
 
 body {
 	background: $background;
 	color: $fontColor;
 	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+.overlay {
+	position: relative;
+    padding: .75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #ffffff;
+    background-color: #de0e0e;
+    border-color: #880000;
+    width: 50%;
+    margin: auto;
 }
 
 .logo {
@@ -22,6 +38,28 @@ body {
 	@include textBox(25px);
 }
 
+@media screen and (max-width: 600px) {
+	.header nav div a:not(:first-child):not(:last-child) {
+		display: none;
+	}
+	.responsive {
+		position: relative;
+		div a {
+			float: none;
+			display: inline block !important;
+			width: 100%;
+			text-align: left;
+		}
+	}
+	.icon {
+		position: absolute;
+	    display: block !important;
+	}
+}
+
+.icon {
+   display: none;
+}
 
 .header {
 	font-family: 'futura-pt-condensed',Futura,sans-serif;
@@ -33,6 +71,8 @@ body {
 			padding: 0px;
 			display: inline-flex;
 			a {
+				font-size: 25px;
+				font-family: horror;
 				height: 50px;
 				width: 80px;
 				line-height: 50px;
@@ -80,6 +120,22 @@ body {
 	}
 }
 
+.links {
+	margin-bottom: 10px;
+	a {
+		color: $fontColor;
+		padding-right: 15px;
+		padding-left: 15px;
+		&:hover {
+			cursor: pointer;
+			text-shadow: 0 0 10px red;
+		}
+		i {
+			font-size: 50px;
+		}
+	}
+}
+
 .bioContainer {
 	width: 50%;
 	margin: auto;
@@ -99,4 +155,8 @@ body {
 
 .bioImage {
 	@include imageBox('../images/band4edit.jpg', 300px, 500px);
+}
+
+.footer {
+	margin-top: 40px;
 }
