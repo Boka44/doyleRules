@@ -13,6 +13,13 @@ body {
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
 }
+
+h2 {
+	@media screen and (max-width: 600px) {
+		font-size: 15px;
+	}
+}
+
 .overlay {
 	position: relative;
     padding: .75rem 1.25rem;
@@ -23,37 +30,61 @@ body {
     border-color: #880000;
     width: 50%;
     margin: auto;
+    @media screen and (max-width: 600px) {
+		font-size: 15px;
+		width: 60%;
+	}
 }
 
 .logo {
-	
 	width: 60%;
+	@media screen and (max-width: 600px) {
+		width: 90%;
+	}
 }
 
 .textBoxL {
 	@include textBox(300px);
+	@media screen and (max-width: 600px) {
+		min-width: 80%;
+		width: 80%;
+	}
 }
 
 .textBoxS {
 	@include textBox(25px);
+	@media screen and (max-width: 600px) {
+		min-width: 80%;
+		width: 80%;
+	}
 }
 
 @media screen and (max-width: 600px) {
-	.header nav div a:not(:first-child):not(:last-child) {
+	div {
+		width: 100%;
+	}
+	.header nav div a:not(:first-child) {
 		display: none;
 	}
 	.responsive {
 		position: relative;
-		div a {
-			float: none;
-			display: inline block !important;
+		div a:not(:first-child) {
+			display: inline-block !important;
 			width: 100%;
-			text-align: left;
+			padding-left: 0px;
+		}
+		div {
+			display: inline-block !important;
+		}
+		div a:first-child {
+			padding-left: 0px !important;  
 		}
 	}
-	.icon {
-		position: absolute;
+	a.icon {
+		width: 100% !important;
 	    display: block !important;
+	    margin: 0px;
+   		padding-left: 15px !important;  
 	}
 }
 
@@ -147,14 +178,48 @@ body {
 	&:hover {
 		background-image: url('../images/band2edit.jpg');
 	}
+	@media screen and (max-width: 600px) {
+		width: 80%;
+		height: 200px;
+	}
 }
 
 .homeImage {
 	@include imageBox('../images/band3edit.jpg', 400px, 600px);
+	@media screen and (max-width: 600px) {
+		width: 80%;
+		height: 200px;
+	}
 }
 
-.bioImage {
-	@include imageBox('../images/band4edit.jpg', 300px, 500px);
+.bioImgContainer {
+	display: inline-flex;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.bioImage1 {
+	@include imageBox('../images/ajedit.jpg', 150px, 200px);
+	@media screen and (max-width: 600px) {
+		width: 30%;
+		height: 75px;
+	}
+}
+
+.bioImage2 {
+	@include imageBox('../images/bokaedit.jpg', 150px, 200px);
+	@media screen and (max-width: 600px) {
+		width: 30%;
+		height: 75px;
+	}
+}
+
+.bioImage3 {
+	@include imageBox('../images/ryanedit.jpg', 150px, 200px);
+	@media screen and (max-width: 600px) {
+		width: 30%;
+		height: 75px;
+	}
 }
 
 .footer {

@@ -8,6 +8,10 @@ body {
   text-align: center;
   font-family: 'Montserrat', sans-serif; }
 
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 15px; } }
+
 .overlay {
   position: relative;
   padding: .75rem 1.25rem;
@@ -18,9 +22,16 @@ body {
   border-color: #880000;
   width: 50%;
   margin: auto; }
+  @media screen and (max-width: 600px) {
+    .overlay {
+      font-size: 15px;
+      width: 60%; } }
 
 .logo {
   width: 60%; }
+  @media screen and (max-width: 600px) {
+    .logo {
+      width: 90%; } }
 
 .textBoxL {
   flex-direction: column;
@@ -40,6 +51,10 @@ body {
   overflow: scroll;
   overflow-x: hidden;
   border: 0px; }
+  @media screen and (max-width: 600px) {
+    .textBoxL {
+      min-width: 80%;
+      width: 80%; } }
 
 .textBoxS {
   flex-direction: column;
@@ -59,23 +74,31 @@ body {
   overflow: scroll;
   overflow-x: hidden;
   border: 0px; }
+  @media screen and (max-width: 600px) {
+    .textBoxS {
+      min-width: 80%;
+      width: 80%; } }
 
 @media screen and (max-width: 600px) {
-  .header nav div a:not(:first-child):not(:last-child) {
+  div {
+    width: 100%; }
+  .header nav div a:not(:first-child) {
     display: none; }
   .responsive {
     position: relative; }
-    .responsive div a {
-      float: none;
-      display: inline block !important;
+    .responsive div a:not(:first-child) {
+      display: inline-block !important;
       width: 100%;
-      text-align: left; }
-  .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    float: right;
-    display: block !important; } }
+      padding-left: 0px; }
+    .responsive div {
+      display: inline-block !important; }
+    .responsive div a:first-child {
+      padding-left: 0px !important; }
+  a.icon {
+    width: 100% !important;
+    display: block !important;
+    margin: 0px;
+    padding-left: 15px !important; } }
 
 .icon {
   display: none; }
@@ -152,6 +175,10 @@ body {
   transition: .3s; }
   .showImage:hover {
     background-image: url("../images/band2edit.jpg"); }
+  @media screen and (max-width: 600px) {
+    .showImage {
+      width: 80%;
+      height: 200px; } }
 
 .homeImage {
   background-image: url("../images/band3edit.jpg");
@@ -160,14 +187,51 @@ body {
   height: 400px;
   width: 600px;
   margin: auto; }
+  @media screen and (max-width: 600px) {
+    .homeImage {
+      width: 80%;
+      height: 200px; } }
 
-.bioImage {
-  background-image: url("../images/band4edit.jpg");
+.bioImgContainer {
+  display: inline-flex;
+  margin-top: 20px;
+  margin-bottom: 30px; }
+
+.bioImage1 {
+  background-image: url("../images/ajedit.jpg");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 300px;
-  width: 500px;
+  height: 150px;
+  width: 200px;
   margin: auto; }
+  @media screen and (max-width: 600px) {
+    .bioImage1 {
+      width: 30%;
+      height: 75px; } }
+
+.bioImage2 {
+  background-image: url("../images/bokaedit.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 200px;
+  margin: auto; }
+  @media screen and (max-width: 600px) {
+    .bioImage2 {
+      width: 30%;
+      height: 75px; } }
+
+.bioImage3 {
+  background-image: url("../images/ryanedit.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 200px;
+  margin: auto; }
+  @media screen and (max-width: 600px) {
+    .bioImage3 {
+      width: 30%;
+      height: 75px; } }
 
 .footer {
   margin-top: 40px; }
