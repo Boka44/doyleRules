@@ -25,6 +25,9 @@ app.get('/', isAuthenticated, (req, res, next) => {
 		contentObj['headline'] = content[0].headline;
 		contentObj['bio'] = content[0].bio;		
 		Show.find({}, (err, shows) => {
+			shows.sort((a,b) => {
+				return new Date(a.date) - new Date(b.date);
+			});
 			res.render('./pages/account', {
 		 		content: contentObj,
 		 		shows: shows

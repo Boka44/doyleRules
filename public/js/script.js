@@ -6,7 +6,7 @@
 
 		const overlay = document.getElementsByClassName('overlay');
 		if(navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(success);
+			navigator.geolocation.getCurrentPosition(success, showErr);
 		} else {
 			overlay[0].innerHTML = "Geolocation disabled in your browser. Enable for closest show."
 		};
@@ -56,10 +56,23 @@
 				overlay[0].innerHTML = "Nearest show near you: " + new Date(next3[0].date).toDateString() + " @ " + next3[0].venue + " in " + next3[0].city;
 
 			})
-
-
 		}
-
+		function showErr(error) {
+		 switch(error.code) {
+		    case error.PERMISSION_DENIED:
+		      overlay[0].innerHTML = "User denied the request for Geolocation. Enable for closest show."
+		      break;
+		    case error.POSITION_UNAVAILABLE:
+		      overlay[0].innerHTML = "User Location information is unavailable."
+		      break;
+		    case error.TIMEOUT:
+		      overlay[0].innerHTML = "The request to get user location timed out."
+		      break;
+		    case error.UNKNOWN_ERROR:
+		      overlay[0].innerHTML = "An unknown error occurred."
+		      break;
+		  }
+		}
 	}
 	
 })();
