@@ -162,8 +162,16 @@ body {
       font-size: 50px; }
 
 .bioContainer {
+  white-space: pre-wrap;
   width: 50%;
   margin: auto; }
+  @media screen and (max-width: 900px) {
+    .bioContainer {
+      width: 75%; } }
+  @media screen and (max-width: 600px) {
+    .bioContainer {
+      width: 90%;
+      font-size: 13px; } }
 
 .showImage {
   background-image: url("../images/band1edit.jpg");

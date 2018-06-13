@@ -39,7 +39,7 @@
 				let length = shows.length;
 				for (let i = 0; i < length; i++) {
 					if(!shows[i].date < new Date()) {
-						if(parseInt(new Date(shows[i].date).getMonth()) <= (parseInt(new Date().getMonth()) + 2)){
+						if(parseInt(new Date(shows[i].date).getMonth()) <= (parseInt(new Date().getMonth()) + 3)){
 							next3.push(shows[i]);
 						}
 					}

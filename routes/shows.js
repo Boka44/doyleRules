@@ -40,4 +40,19 @@ app.get('/all', (req, res, next) => {
 	})
 })
 
+
+// send initial request from code in googleCal.js
+
+// below is to retrieve auth token.
+
+
+app.get('/oauthcallback', (req, res, next) => {
+
+	// const {tokens} = await oauth2Client.getToken(code)
+	// oauth2Client.setCredentials(tokens);
+
+})
+
+
+
 module.exports = app;

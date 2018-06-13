@@ -168,8 +168,16 @@ h2 {
 }
 
 .bioContainer {
+	white-space: pre-wrap;
 	width: 50%;
 	margin: auto;
+	@media screen and (max-width: 900px) {
+		width: 75%;
+	}
+	@media screen and (max-width: 600px) {
+		width: 90%;
+		font-size: 13px;
+	}
 }
 
 .showImage {
