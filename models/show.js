@@ -7,6 +7,7 @@ const showSchema = new mongoose.Schema({
 	time: String,
 	bands: String,
 	city: String,
+	link: String,
 	lat: Number,
 	long: Number
 });

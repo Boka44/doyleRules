@@ -27,19 +27,25 @@
 			    <%= show.venue %>
 			    <br>
 			    <% if(show.time) { %>
-			    Time:
-			    <%= show.time %>
-			    <br>
+				    Time:
+				    <%= show.time %>
+				    <br>
 			    <% } %>
 			    <% if(show.bands) { %>
-			    Bands:
-			    <%= show.bands %>
-			    <br> 
+				    Bands:
+				    <%= show.bands %>
+				    <br> 
 			    <% } %>
 			    City:
 			    <%= show.city %>
 			    <br>
-			    <br>
+			    <% if(show.link) { %>
+				    Event Page:
+				    <br>
+		  	  		<a href="<%= show.link %>" target="_blank"><%= show.link %></a>
+				    <br> 
+				    <% } %>
+				    <br>
 			<% }) %>
 		</div>
 

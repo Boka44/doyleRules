@@ -47,6 +47,10 @@
         <br>
         <textarea type="text" class="textBoxS" rows="10" cols="50" name="showCity"><%= show.city %></textarea>   
         <br>
+        Link:
+        <br>
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="showLink"><%= show.link %></textarea>   
+        <br>
         <input type="submit" formaction="/account/shows/edit/<%= show.id %>" name="edit" value="Submit" id="submitBtn">
         <input type="submit" formaction="/account/shows/delete/<%= show.id %>" name="delete" value="Delete" id="submitBtn">
         <br>
@@ -76,6 +80,10 @@
         City:
         <br>
         <textarea type="text" class="textBoxS" rows="10" cols="50" name="showCity"></textarea>   
+        <br>
+        Link:
+        <br>
+        <textarea type="text" class="textBoxS" rows="10" cols="50" name="showLink"></textarea>   
         <br>
         <input type="submit" formaction="/account/shows/add" name="add" value="Add" id="submitBtn">
         <br>

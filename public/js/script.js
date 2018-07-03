@@ -69,7 +69,7 @@
 		      overlay[0].innerHTML = "The request to get user location timed out."
 		      break;
 		    case error.UNKNOWN_ERROR:
-		      overlay[0].innerHTML = "An unknown error occurred."
+		      overlay[0].innerHTML = "An unknown error occurred. Bug Boka in the contact form."
 		      break;
 		  }
 		}

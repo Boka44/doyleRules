@@ -57,6 +57,7 @@ app.post('/shows/add', isAuthenticated, (req, res, next) => {
 	const time = req.body.showTime;
 	const bands = req.body.showBands;
 	const city = req.body.showCity;
+	const link = req.body.showLink;
 	let lat;
 	let long;
 	googleMapsClient.geocode({address: city }, function(err, response) {
@@ -71,6 +72,7 @@ app.post('/shows/add', isAuthenticated, (req, res, next) => {
 				time: time,
 				bands: bands,
 				city: city,
+				link: link,
 				lat: lat,
 				long: long
 			});
@@ -88,6 +90,7 @@ app.post('/shows/edit/:id', isAuthenticated, (req, res, next) => {
 	const time = req.body.showTime;
 	const bands = req.body.showBands;
 	const city = req.body.showCity;
+	const link = req.body.showLink;
 	googleMapsClient.geocode({address: city }, function(err, response) {
 
 	  	if (!err) {
@@ -100,6 +103,7 @@ app.post('/shows/edit/:id', isAuthenticated, (req, res, next) => {
 				time: time,
 				bands: bands,
 				city: city,
+				link: link,
 				lat: lat,
 				long: long
 			}
