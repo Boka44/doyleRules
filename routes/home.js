@@ -19,7 +19,11 @@ app.get('/', (req, res, next) => {
 			})
 			if(shows.length > 3) {
 				let length = 3;
+				let max = shows.length;
 				for (let i = 0; i < length; i++) {
+					if(i === max) {
+						break;
+					}
 					if(shows[i].date < new Date()) {
 						length++;
 					} else {
